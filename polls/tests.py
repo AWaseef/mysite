@@ -37,6 +37,7 @@ class MySeleniumTests(StaticLiveServerTestCase):
         password_input = self.selenium.find_element(By.NAME, "password")
         password_input.send_keys("pirineus")
         self.selenium.find_element(By.XPATH, '//input[@value="Log in"]').click()
+        print("Succes")
 
         # Verificar acceso exitoso al panel de administración
         self.assertEqual(self.selenium.title, "Site administration | Django site admin")
